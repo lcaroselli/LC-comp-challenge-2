@@ -4,21 +4,23 @@
 
 body {
   margin: 0;
+  background-color: #F4F7F7;
 }
 
 #main-section {
-  background-color: #E2E2E2;
+  background-color: #F4F7F7;
 }
 
 #page-header {
-  background-color: #423C3C;
+  background-color: #083045;
   border: 1px solid black;
+  height: 18vh;
   padding: 20px;
   width: 100vw;
 }
 
 .playlist-box {
-  background-color: #FFFFFF;
+  background-color: #FFFFFF;/*change to something more interesting?*/
   display: inline-block;
   border: 1px solid black;
   height: 500px;
@@ -62,15 +64,17 @@ body {
   margin-bottom: 40px;
 }
 
+
 .arrow img {
   background-color: white;
-  border: 2px solid black;
   border-radius: 50%;
-  height: 16%;
+  height: 15%;
+  opacity: 0.7;
+  padding: 8px;
   position: relative;
   top: 10px;
   left: 10px;
-  width: 16%;
+  width: 15%;
 }
 
 .box-images {
@@ -86,29 +90,24 @@ body {
 }
 
 h1 {
-  margin: 0px;
+  color: #083045;
+  font-size: 50px;
+  margin: 30px;
 }
 
 h3 {
-  color: #FFF9F9;
-  display: inline;
+  color: #EED369;
   font-size: 50px;
 }
 
 h3 img {
-  height: 2.5%;
-  width: 2.5%;
-}
-
-h4 {
-  position: relative;
-  top: 200px;
+  height: 3.5%;
+  width: 3.5%;
 }
 
 nav p {
-  color: #BBCEC9;
   display: inline-block;
-  margin-right: 40px;
+  margin: 0;
 }
 
 nav p:hover {
@@ -116,7 +115,76 @@ nav p:hover {
 }
 
 #shares {
-  color: #FFF9F9;
+  color: #EED369;
   font-size: 18px;
+  text-shadow: 2px 2px #1E1419;
+}
+
+#playlists, #personal-videos {
+  color: rgba(238, 211, 105, 0.72);
+}
+
+#playlists:hover, #personal-videos:hover {
   text-shadow: 2px 2px black;
+}
+
+#shares img {
+  height: 4%;
+  width: 4%;
+}
+
+#playlists img {
+  height: 6%;
+  width: 6%;
+}
+
+#personal-videos img {
+  height: 4%;
+  width: 4%;
+}
+
+#currently-playing {
+    background-color: #083045;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-radius: 50px 0px 0px 0px;
+    color: white;
+    font-size: 15px;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+}
+
+#currently-playing:hover {
+  transition-duration: 2s;
+  transform: scale(1, 1);
+  border-radius: 0px;
+  width: 20%;
+}
+
+#currently-playing img {
+  position: relative;
+  top: 13px;
+  left: 20px;
+}
+
+.text-container {
+  position: relative;
+  left: 15px;
+  margin: 0 20px 0 0;
+  top: 110px;
+}
+
+.grey-box {
+  background-color: #E0E2E2;
+  font-size: 14px;
+  height: 50px;
+  padding: 15px;
+  width: 96%;
+}
+
+.grey-box:hover {
+  cursor: pointer;
 }
