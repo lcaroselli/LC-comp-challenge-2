@@ -3,12 +3,29 @@
 }
 
 body {
-  margin: 0;
   background-color: #F4F7F7;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+/* Layout Controls */
+.grey-box {
+  background-color: #E0E2E2;
+  font-size: 13px;
+  height: 45px;
+  margin: 0;
+  overflow: auto;
+  padding: 3px;
+  width: 96%;
+}
+
+.grey-box p:hover {
+  cursor: pointer;
 }
 
 #main-section {
   background-color: #F4F7F7;
+  margin: auto;
 }
 
 #page-header {
@@ -16,54 +33,78 @@ body {
   border: 1px solid black;
   height: 18vh;
   padding: 20px;
-  width: 100vw;
+  width: 100%;
 }
 
 .playlist-box {
-  background-color: #FFFFFF;/*change to something more interesting?*/
-  display: inline-block;
+  background-color: #FFFFFF;
   border: 1px solid black;
+  display: inline-block;
   height: 500px;
   width: 300px;
 }
 
-/* Images */
-#sansa-box {
-  background-image: url(assets/sansa.png);
+/* Box Images */
+#arya-box {
+  background-image: url(assets/arya.png);
 }
 
 #bran-box {
- background-image: url(assets/bran.png);
-}
-
-#jon-box {
- background-image: url(assets/jon.png);
-}
-
-#arya-box {
- background-image: url(assets/arya.png);
+  background-image: url(assets/bran.png);
 }
 
 #cersei-box {
- background-image: url(assets/cersei.png);
+  background-image: url(assets/cersei.png);
+}
+
+#dany-box {
+  background-image: url(assets/daenerys.png);
+}
+
+#jon-box {
+  background-image: url(assets/jon.png);
+}
+
+#marg-box {
+  background-image: url(assets/maergery.png);
+}
+
+#sansa-box {
+  background-image: url(assets/sansa.png);
 }
 
 #tyrion-box {
  background-image: url(assets/tyrion.png);
 }
 
-#dany-box {
- background-image: url(assets/daenerys.png);
-}
-
-#marg-box {
- background-image: url(assets/maergery.png);
-}
-
+/* Box Image Layout */
 #arya-box, #bran-box, #cersei-box, #dany-box, #jon-box, #marg-box, #sansa-box, #tyrion-box {
   margin-bottom: 40px;
 }
 
+.box-images {
+  background-attachment: local;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: none;
+  box-shadow: 0 0 10px #000000;
+  margin: 0 10px;
+  vertical-align: top;
+}
+
+/* Accessory Elements */
+#admin-arrow {
+  color: #F4F7F7;
+  margin: 0;
+  float: right;
+}
+
+#admin-arrow img, #personal-videos img, #playlists img, #shares img {
+  height: 25px;
+  padding-top: 6px;
+  width: 25px;
+}
 
 .arrow img {
   background-color: white;
@@ -77,41 +118,13 @@ body {
   width: 15%;
 }
 
-.box-images {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: local;
-  background-size: 100%;
-  background-position: top;
-  border: none;
-  box-shadow: 0 0 10px #000000;
-  margin: 0 10px;
-  vertical-align: top;
+#personal-videos, #playlists {
+  color: rgba(238, 211, 105, 0.72);
 }
 
-h1 {
-  color: #083045;
-  font-size: 50px;
-  margin: 30px;
-}
-
-h3 {
+#personal-videos:hover, #playlists:hover {
   color: #EED369;
-  font-size: 50px;
-}
-
-h3 img {
-  height: 3.5%;
-  width: 3.5%;
-}
-
-nav p {
-  display: inline-block;
-  margin: 0;
-}
-
-nav p:hover {
-  cursor: pointer;
+  text-shadow: 2px 2px black;
 }
 
 #shares {
@@ -120,71 +133,116 @@ nav p:hover {
   text-shadow: 2px 2px #1E1419;
 }
 
-#playlists, #personal-videos {
-  color: rgba(238, 211, 105, 0.72);
+/* Headers */
+h1 {
+  color: #083045;
+  font-size: 50px;
+  margin: 30px 15px;
 }
 
-#playlists:hover, #personal-videos:hover {
-  text-shadow: 2px 2px black;
+h3 {
+  color: #EED369;
+  display: inline-block;
+  position: relative;
+  left: 20%;
+  font-family: 'Cinzel', serif;
+  font-size: 50px;
 }
 
-#shares img {
-  height: 4%;
-  width: 4%;
+h3 img {
+  height: 38px;
+  width: 38px;
 }
 
-#playlists img {
-  height: 6%;
-  width: 6%;
+h4 {
+  color: #395656;
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 0px;
 }
 
-#personal-videos img {
-  height: 4%;
-  width: 4%;
+#playlist-title {
+  margin-top: 0px;
 }
 
+nav p {
+  display: inline-block;
+  margin-right: 40px;
+  text-align: center;
+}
+
+nav p:hover {
+  cursor: pointer;
+}
+
+
+/* Song Widget */
 #currently-playing {
+    background-image: url(assets/musicgif.gif);
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #083045;
     border-top: 2px solid black;
     border-left: 2px solid black;
     border-radius: 50px 0px 0px 0px;
     color: white;
-    font-size: 15px;
+    font-size: 12px;
     height: 40px;
     position: fixed;
     bottom: 0;
     right: 0;
+    text-align: right;
     width: 50px;
 }
 
 #currently-playing:hover {
-  transition-duration: 2s;
+  background-position: bottom 10px left 20px;
+  transition-duration: 1s;
   transform: scale(1, 1);
   border-radius: 0px;
+  padding-right: 20px;
   width: 20%;
-}
-
-#currently-playing img {
-  position: relative;
-  top: 13px;
-  left: 20px;
 }
 
 .text-container {
   position: relative;
   left: 15px;
   margin: 0 20px 0 0;
-  top: 110px;
+  top: 60px;
 }
 
-.grey-box {
-  background-color: #E0E2E2;
-  font-size: 14px;
-  height: 50px;
-  padding: 15px;
-  width: 96%;
+#accent {
+  color: #3E93C4;
+  font-size: 35px;
 }
 
-.grey-box:hover {
-  cursor: pointer;
+#date {
+  color: #6B8282;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+#views, #views-number {
+  background-color: white;
+  color: #083045;
+  margin: 0;
+  opacity: 0.72;
+  position: relative;
+  left: 235px;
+  top: -40px;
+  width: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#views {
+  font-size: 17px;
+}
+
+#views-number {
+  font-size: 28px;
+}
+
+.attachments-and-playlist {
+  font-size: 15px;
 }

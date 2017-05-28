@@ -5,137 +5,150 @@
     <title>GoT Playlist</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="normalize.css" type="text/css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
   </head>
 
   <body>
     <header id="page-header">
+      <p id="admin-arrow">
+        <img src="assets/user.svg" alt="admin icon">Admin Username <img src="assets/down-arrow.svg" alt="down arrow">
+      </p>
       <nav>
         <p id="shares"><img src="assets/share.svg" alt="shares icon"> SHARES  </p>
         <p id="playlists"><img src="assets/playlist.svg" alt="playlist icon"> PLAYLISTS </p>
         <p id="personal-videos"><img src="assets/group.svg" alt="group icon"> PERSONAL VIDEOS </p>
-        <h3>GoT!<img src="assets/werewolf.svg" alt="game of thrones Stark logo"></h3>
+        <h3>GoT <img src="assets/werewolf.svg" alt="game of thrones Stark logo"></h3>
       </nav>
     </header>
 
     <section id="main-section">
       <h1>Shares</h1>
-
       <article class="playlist-box box-images" id="sansa-box">
-        <div class="arrow"><img src="assets/next.svg" alt="next arrow"></div>
+        <div class="arrow">
+          <img src="assets/next.svg" alt="next arrow"> <p id="views">Views</p> <p id="views-number">02</p>
+        </div>
         <div class="text-container">
           <h4>Sansa Stark</h4>
-          <p>Wednesday, December 20th, 2017, 10:22am</p>
-          <div class="grey-box">http://2got.2gotstage.com/p/sansa_stark</div>
-          <p>Playlist</p>
-          <p>From porcelain, to ivory, to steel</p>
-          <p>Attachments</p>
-          <p>04</p>
+          <p id="date">Wednesday, 12/20/2017, 10:22am</p>
+          <div class="grey-box"><p>http://2got.2gotstage.com/p/sansa_stark</p></div>
+          <p class="attachments-and-playlist">Playlist</p>
+          <h4 id="playlist-title">From porcelain, to ivory, to steel</h4>
+          <p class="attachments-and-playlist">Attachments</p>
+          <p id="accent">04</p>
         </div>
       </article>
 
       <article class="playlist-box box-images" id="bran-box">
-        <div class="arrow"><img src="assets/next.svg" alt="next arrow"></div>
+        <div class="arrow">
+          <img src="assets/next.svg" alt="next arrow"> <p id="views">Views</p> <p id="views-number">02</p>
+        </div>
         <div class="text-container">
           <h4>Bran Stark</h4>
-          <p>Wednesday, December 20th, 2017, 10:22am</p>
-          <div class="grey-box">http://2got.2gotstage.com/p/bran_stark</div>
-          <p>Link</p>
-          <p>Playlist</p>
-          <p>I'm not dead either</p>
-          <p>Attachments</p>
-          <p>04</p>
+          <p id="date">Wednesday, 12/20/2017, 10:22am</p>
+          <div class="grey-box"><p>http://2got.2gotstage.com/p/bran_stark</p></div>
+          <p class="attachments-and-playlist">Playlist</p>
+          <h4 id="playlist-title">I'm not dead either</h4>
+          <p class="attachments-and-playlist">Attachments</p>
+          <p id="accent">04</p>
         </div>
       </article>
 
       <article class="playlist-box box-images" id="jon-box">
-        <div class="arrow"><img src="assets/next.svg" alt="next arrow"></div>
+        <div class="arrow">
+          <img src="assets/next.svg" alt="next arrow"> <p id="views">Views</p> <p id="views-number">04</p>
+        </div>
         <div class="text-container">
           <h4>Jon Snow</h4>
-          <p>Wednesday, December 20th, 2017, 10:22am</p>
-          <div class="grey-box">http://2got.2gotstage.com/p/jon_snow</div>
-          <p>Link</p>
-          <p>Playlist</p>
-          <p>The dead come with it</p>
-          <p>Attachments</p>
-          <p>04</p>
+          <p id="date">Wednesday, 12/20/2017, 10:22am</p>
+          <div class="grey-box"><p>http://2got.2gotstage.com/p/jon_snow</p></div>
+          <p class="attachments-and-playlist">Playlist</p>
+          <h4 id="playlist-title">The dead come with it</h4>
+          <p class="attachments-and-playlist">Attachments</p>
+          <p id="accent">04</p>
         </div>
       </article>
 
       <article class="playlist-box box-images" id="arya-box">
-        <div class="arrow"><img src="assets/next.svg" alt="next arrow"></div>
+        <div class="arrow">
+          <img src="assets/next.svg" alt="next arrow"><p id="views">Views</p> <p id="views-number">07</p>
+        </div>
         <div class="text-container">
           <h4>Arya Stark</h4>
-          <p>Wednesday, December 20th, 2017, 10:22am</p>
-          <div class="grey-box">http://2got.2gotstage.com/p/arya_stark</div>
-          <p>Link</p>
-          <p>Playlist</p>
-          <p>Not today</p>
-          <p>Attachments</p>
-          <p>04</p>
+          <p id="date">Wednesday, 12/20/2017, 10:22am</p>
+          <div class="grey-box"><p>http://2got.2gotstage.com/p/arya_stark</p></div>
+          <p class="attachments-and-playlist">Playlist</p>
+          <h4 id="playlist-title">Not today</h4>
+          <p class="attachments-and-playlist">Attachments</p>
+          <p id="accent">04</p>
         </div>
       </article>
 
       <article class="playlist-box box-images" id="cersei-box">
-        <div class="arrow"><img src="assets/next.svg" alt="next arrow"></div>
+        <div class="arrow">
+          <img src="assets/next.svg" alt="next arrow"><p id="views">Views</p> <p id="views-number">01</p>
+        </div>
         <div class="text-container">
           <h4>Cersei Lannister</h4>
-          <p>Wednesday, December 20th, 2017, 10:22am</p>
-          <div class="grey-box">http://2got.2gotstage.com/p/cersei_lannister</div>
-          <p>Link</p>
-          <p>Playlist</p>
-          <p>You win or you die</p>
-          <p>Attachments</p>
-          <p>04</p>
+          <p id="date">Wednesday, 12/20/2017, 10:22am</p>
+          <div class="grey-box"><p>http://2got.2gotstage.com/p/cersei_lannister</p></div>
+          <p class="attachments-and-playlist">Playlist</p>
+          <h4 id="playlist-title">You win or you die</h4>
+          <p class="attachments-and-playlist">Attachments</p>
+          <p id="accent">04</p>
         </div>
       </article>
 
       <article class="playlist-box box-images" id="tyrion-box">
-        <div class="arrow"><img src="assets/next.svg" alt="next arrow"></div>
+        <div class="arrow">
+          <img src="assets/next.svg" alt="next arrow"><p id="views">Views</p> <p id="views-number">02</p>
+        </div>
         <div class="text-container">
           <h4>Tyrion Lannister</h4>
-          <p>Wednesday, December 20th, 2017, 10:22am</p>
-          <div class="grey-box">http://2got.2gotstage.com/p/tyrion_lanister</div>
-          <p>Link</p>
-          <p>Playlist</p>
-          <p>Wear it like armor</p>
-          <p>Attachments</p>
-          <p>04</p>
+          <p id="date">Wednesday, 12/20/2017, 10:22am</p>
+          <div class="grey-box"><p>http://2got.2gotstage.com/p/tyrion_lanister</p></div>
+          <p class="attachments-and-playlist">Playlist</p>
+          <h4 id="playlist-title">Wear it like armor</h4>
+          <p class="attachments-and-playlist">Attachments</p>
+          <p id="accent">04</p>
         </div>
       </article>
 
       <article class="playlist-box box-images" id="dany-box">
-        <div class="arrow"><img src="assets/next.svg" alt="next arrow"></div>
+        <div class="arrow">
+          <img src="assets/next.svg" alt="next arrow"><p id="views">Views</p> <p id="views-number">05</p>
+        </div>
         <div class="text-container">
           <h4>Daenerys Targaryen</h4>
-          <p>Wednesday, December 20th, 2017, 10:22am</p>
-          <div class="grey-box">http://2got.2gotstage.com/p/daenerys_targaryen</div>
-          <p>Link</p>
-          <p>Playlist</p>
-          <p>I'm going to break the wheel</p>
-          <p>Attachments</p>
-          <p>04</p>
+          <p id="date">Wednesday, 12/20/2017, 10:22am</p>
+          <div class="grey-box"><p>http://2got.2gotstage.com/p/daenerys_targaryen</p></div>
+          <p class="attachments-and-playlist">Playlist</p>
+          <h4 id="playlist-title">I'm going to break the wheel</h4>
+          <p class="attachments-and-playlist">Attachments</p>
+          <p id="accent">04</p>
         </div>
       </article>
 
       <article class="playlist-box box-images" id="marg-box">
-        <div class="arrow"><img src="assets/next.svg" alt="next arrow"></div>
+        <div class="arrow">
+          <img src="assets/next.svg" alt="next arrow"> <p id="views">Views</p> <p id="views-number">02</p>
+        </div>
         <div class="text-container">
           <h4>Margaery Tyrell</h4>
-          <p>Wednesday, December 20th, 2017, 10:22am</p>
-          <div class="grey-box">http://2got.2gotstage.com/p/margaery_tyrell</div>
-          <p>Link</p>
-          <p>Playlist</p>
-          <p>To be queen</p>
-          <p>Attachments</p>
-          <p>04</p>
+          <p id="date">Wednesday, 12/20/2017, 10:22am</p>
+          <div class="grey-box"><p>http://2got.2gotstage.com/p/margaery_tyrell</p></div>
+          <p class="attachments-and-playlist">Playlist</p>
+          <h4 id="playlist-title">To be queen</h4>
+          <p class="attachments-and-playlist">Attachments</p>
+          <p id="accent">04</p>
         </div>
       </article>
 
       <div id="currently-playing">
-        <img src="assets/musicgif.gif" alt="music-gif">
       </div>
-      
     </section>
 
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
