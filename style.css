@@ -26,12 +26,13 @@ body {
 #main-section {
   background-color: #F4F7F7;
   margin: auto;
+  max-width: 1600px;
 }
 
 #page-header {
   background-color: #083045;
   border: 1px solid black;
-  height: 18vh;
+  height: 150px;
   padding: 20px;
   width: 100%;
 }
@@ -40,7 +41,7 @@ body {
   background-color: #FFFFFF;
   border: 1px solid black;
   display: inline-block;
-  height: 500px;
+  height: 430px;
   width: 300px;
 }
 
@@ -96,13 +97,18 @@ body {
 /* Accessory Elements */
 #admin-arrow {
   color: #F4F7F7;
-  margin: 0;
   float: right;
+  margin: 0;
+}
+
+#admin-arrow img {
+  margin: 0 8px;
 }
 
 #admin-arrow img, #personal-videos img, #playlists img, #shares img {
   height: 25px;
-  padding-top: 6px;
+  padding-top: 7px;
+  vertical-align: bottom;
   width: 25px;
 }
 
@@ -110,11 +116,11 @@ body {
   background-color: white;
   border-radius: 50%;
   height: 15%;
+  left: 10px;
   opacity: 0.7;
   padding: 8px;
   position: relative;
   top: 10px;
-  left: 10px;
   width: 15%;
 }
 
@@ -133,7 +139,8 @@ body {
   text-shadow: 2px 2px #1E1419;
 }
 
-/* Headers */
+
+/* Headers & Nav */
 h1 {
   color: #083045;
   font-size: 50px;
@@ -142,27 +149,28 @@ h1 {
 
 h3 {
   color: #EED369;
-  display: inline-block;
-  position: relative;
-  left: 20%;
+  float: right;
   font-family: 'Cinzel', serif;
   font-size: 50px;
+  margin-top: 0;
 }
 
 h3 img {
-  height: 38px;
-  width: 38px;
+  height: 40px;
+  vertical-align: middle;
+  width: 40px;
 }
 
 h4 {
   color: #395656;
   font-size: 18px;
-  margin-top: 30px;
   margin-bottom: 0px;
 }
 
-#playlist-title {
-  margin-top: 0px;
+
+nav {
+  position: relative;
+  top: 65px;
 }
 
 nav p {
@@ -185,11 +193,11 @@ nav p:hover {
     border-top: 2px solid black;
     border-left: 2px solid black;
     border-radius: 50px 0px 0px 0px;
+    bottom: 0;
     color: white;
     font-size: 12px;
     height: 40px;
     position: fixed;
-    bottom: 0;
     right: 0;
     text-align: right;
     width: 50px;
@@ -197,23 +205,24 @@ nav p:hover {
 
 #currently-playing:hover {
   background-position: bottom 10px left 20px;
-  transition-duration: 1s;
-  transform: scale(1, 1);
   border-radius: 0px;
   padding-right: 20px;
+  transition-duration: 1s;
+  transform: scale(1, 1);
   width: 20%;
 }
 
-.text-container {
-  position: relative;
-  left: 15px;
-  margin: 0 20px 0 0;
-  top: 60px;
-}
+/* Text */
 
 #accent {
   color: #3E93C4;
   font-size: 35px;
+  margin-top: 0;
+}
+
+.attachments-and-playlist {
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
 #date {
@@ -222,17 +231,17 @@ nav p:hover {
   margin-top: 3px;
 }
 
-#views, #views-number {
-  background-color: white;
-  color: #083045;
-  margin: 0;
-  opacity: 0.72;
+#playlist-title {
+  font-size: 16px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.text-container {
+  left: 15px;
+  margin: 0 20px 0 0;
   position: relative;
-  left: 235px;
-  top: -40px;
-  width: 60px;
-  text-align: center;
-  font-weight: bold;
+  top: 60px;
 }
 
 #views {
@@ -243,6 +252,52 @@ nav p:hover {
   font-size: 28px;
 }
 
-.attachments-and-playlist {
-  font-size: 15px;
+#views, #views-number {
+  background-color: white;
+  color: #083045;
+  font-weight: bold;
+  left: 235px;
+  margin: 0;
+  opacity: 0.72;
+  position: relative;
+  text-align: center;
+  top: -40px;
+  width: 60px;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1030px) {
+  #currently-playing {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+
+@media only screen and (max-width: 989px) {
+  .playlist-box {
+    height: 500px;
+    width: 450px;
+  }
+
+  #views, #views-number {
+    left: 380px;
+    top: -60px;
+  }
+
+  .text-container {
+    top: 118px;
+  }
+
+  #playlist-title {
+    margin-bottom: 20px;
+  }
+}
+
+
+@media only screen and (max-width: ...px) {
+
+
 }

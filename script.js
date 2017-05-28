@@ -9,3 +9,5 @@ currentlyPlaying.addEventListener('mouseout', function(){
   currentlyPlaying.innerHTML = " ";
 }
 );
+
+//Currently playing widget
