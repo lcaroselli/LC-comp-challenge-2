@@ -13,10 +13,9 @@ body {
   background-color: #E0E2E2;
   font-size: 13px;
   height: 45px;
-  margin: 0;
-  overflow: auto;
-  padding: 3px;
-  width: 96%;
+  overflow: scroll;
+  padding: 2px;
+  width: 269px;
 }
 
 .grey-box p:hover {
@@ -25,24 +24,37 @@ body {
 
 #main-section {
   background-color: #F4F7F7;
-  margin: auto;
-  max-width: 1600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 #page-header {
+  width: 100%;
+  min-height: 150px;
   background-color: #083045;
   border: 1px solid black;
-  height: 150px;
   padding: 20px;
-  width: 100%;
 }
 
 .playlist-box {
-  background-color: #FFFFFF;
-  border: 1px solid black;
-  display: inline-block;
-  height: 430px;
+  display: flex;
+  flex-direction: column;
   width: 300px;
+  min-width: 300px;
+  margin: 8px;
+  border: 1px solid #455A64;
+  background-color: #FFFFFF;
+  align-items: flex-start;
+  height: 470px;
+}
+
+.text-container {
+  left: 15px;
+  margin: 0 20px 0 0;
+  position: relative;
+  top: 90px;
 }
 
 /* Box Images */
@@ -80,7 +92,8 @@ body {
 
 /* Box Image Layout */
 #arya-box, #bran-box, #cersei-box, #dany-box, #jon-box, #marg-box, #sansa-box, #tyrion-box {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  margin-left: 20px;
 }
 
 .box-images {
@@ -143,6 +156,7 @@ body {
 /* Headers & Nav */
 h1 {
   color: #083045;
+  display: inline-block;
   font-size: 50px;
   margin: 30px 15px;
 }
@@ -166,7 +180,6 @@ h4 {
   font-size: 18px;
   margin-bottom: 0px;
 }
-
 
 nav {
   position: relative;
@@ -237,67 +250,165 @@ nav p:hover {
   margin-top: 0;
 }
 
-.text-container {
-  left: 15px;
-  margin: 0 20px 0 0;
-  position: relative;
-  top: 60px;
-}
-
 #views {
   font-size: 17px;
+  margin-top: -37px;
+  margin-bottom: 0px;
 }
 
 #views-number {
   font-size: 28px;
+  margin-top: 0px;
 }
 
 #views, #views-number {
   background-color: white;
   color: #083045;
   font-weight: bold;
-  left: 235px;
-  margin: 0;
+  margin-left: 76%;
+  margin-bottom: 0px;
   opacity: 0.72;
-  position: relative;
   text-align: center;
-  top: -40px;
   width: 60px;
 }
 
 
 /* Media Queries */
-
-@media only screen and (max-width: 1030px) {
-  #currently-playing {
-    display: none;
-    visibility: hidden;
+@media screen and (max-width: 990px){
+  .grey-box {
+    width: 380px;
   }
-}
 
-
-@media only screen and (max-width: 989px) {
   .playlist-box {
     height: 500px;
-    width: 450px;
-  }
-
-  #views, #views-number {
-    left: 380px;
-    top: -60px;
+    width: 45vw;
   }
 
   .text-container {
-    top: 118px;
-  }
-
-  #playlist-title {
-    margin-bottom: 20px;
+    left: 15px;
+    top: 140px;
   }
 }
 
+@media screen and (max-width: 900px){
+  .arrow img {
+    height: 60px;
+    width: 60px;
+  }
 
-@media only screen and (max-width: ...px) {
+  .grey-box {
+    width: 500px;
+  }
 
+  .playlist-box {
+    display: block;
+    height: 690px;
+    width: 85vw;
+  }
 
+  .text-container {
+    top: 330px;
+  }
+
+  #views {
+    margin-top: -30px;
+  }
+
+  #views, #views-number {
+    margin-left: 83%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .text-container {
+    top: 310px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .grey-box {
+    width: 350px;
+  }
+
+  .text-container {
+    top: 280px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .text-container {
+    top: 260px;
+  }
+
+  #admin-arrow {
+    font-size: 12px;
+  }
+
+  #admin-arrow img {
+    height: 20px;
+    width: 20px;
+  }
+
+  h1 {
+    font-size: 25px;
+    margin: 20px;
+  }
+
+  h3 {
+    font-size: 35px;
+    position: absolute;
+    top: 20px;
+  }
+
+  h3 img {
+    height: 32px;
+    width: 32px;
+  }
+
+  nav {
+    display: flex;
+    position: absolute;
+  }
+
+  #shares, #playlists, #personal-videos {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .text-container {
+    top: 180px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grey-box {
+    width: 280px;
+  }
+
+  .playlist-box {
+    height: 500px;
+  }
+
+  .text-container {
+    top: 120px;
+  }
+
+  #views, #views-number {
+    margin-left: 76%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .grey-box {
+    width: 230px;
+  }
+
+  .playlist-box {
+    height: 450px;
+  }
+
+  .text-container {
+    top: 90px;
+  }
 }
