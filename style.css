@@ -8,6 +8,75 @@ body {
   margin: 0;
 }
 
+#page-header {
+  background-color: #083045;
+  border: 1px solid black;
+  display: flex;
+  height: 150px;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 0 20px 25px;
+  position: absolute;
+  top: 85px;
+  left: 0px;
+
+}
+
+nav p {
+  display: inline-block;
+  margin-right: 40px;
+  padding-right: 25px;
+  text-align: center;
+}
+
+nav p:hover {
+  cursor: pointer;
+}
+
+#nav-lines {
+  display: none;
+  visibility: hidden;
+}
+
+#admin-arrow {
+  color: #F4F7F7;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+#admin-arrow img {
+  margin: 0 8px;
+}
+
+#admin-arrow img, #personal-videos img, #playlists img, #shares img {
+  height: 25px;
+  padding-top: 7px;
+  vertical-align: bottom;
+  width: 25px;
+}
+
+.arrow img {
+  background-color: white;
+  border-radius: 50%;
+  height: 15%;
+  left: 10px;
+  opacity: 0.7;
+  padding: 8px;
+  position: relative;
+  top: 10px;
+  width: 15%;
+}
+
 /* Layout Controls */
 .grey-box {
   background-color: #E0E2E2;
@@ -22,20 +91,21 @@ body {
   cursor: pointer;
 }
 
+h1 {
+  color: #083045;
+  display: flex;
+  font-size: 50px;
+  margin: 30px 20px;
+}
+
 #main-section {
   background-color: #F4F7F7;
+  width: 100%;
+  justify-content: center;
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-#page-header {
-  width: 100%;
-  min-height: 150px;
-  background-color: #083045;
-  border: 1px solid black;
-  padding: 20px;
 }
 
 .playlist-box {
@@ -47,7 +117,7 @@ body {
   border: 1px solid #455A64;
   background-color: #FFFFFF;
   align-items: flex-start;
-  height: 470px;
+  height: 450px;
 }
 
 .text-container {
@@ -93,7 +163,7 @@ body {
 /* Box Image Layout */
 #arya-box, #bran-box, #cersei-box, #dany-box, #jon-box, #marg-box, #sansa-box, #tyrion-box {
   margin-bottom: 30px;
-  margin-left: 20px;
+  margin-left: 8px;
 }
 
 .box-images {
@@ -108,34 +178,7 @@ body {
 }
 
 /* Accessory Elements */
-#admin-arrow {
-  color: #F4F7F7;
-  float: right;
-  margin: 0;
-}
 
-#admin-arrow img {
-  margin: 0 8px;
-}
-
-#admin-arrow img, #personal-videos img, #playlists img, #shares img {
-  height: 25px;
-  padding-top: 7px;
-  vertical-align: bottom;
-  width: 25px;
-}
-
-.arrow img {
-  background-color: white;
-  border-radius: 50%;
-  height: 15%;
-  left: 10px;
-  opacity: 0.7;
-  padding: 8px;
-  position: relative;
-  top: 10px;
-  width: 15%;
-}
 
 #personal-videos, #playlists {
   color: rgba(238, 211, 105, 0.72);
@@ -152,18 +195,11 @@ body {
   text-shadow: 2px 2px #1E1419;
 }
 
-
-/* Headers & Nav */
-h1 {
-  color: #083045;
-  display: inline-block;
-  font-size: 50px;
-  margin: 30px 15px;
-}
-
 h3 {
   color: #EED369;
-  float: right;
+  position: absolute;
+  top: 82px;
+  right: 13px;
   font-family: 'Cinzel', serif;
   font-size: 50px;
   margin-top: 0;
@@ -181,20 +217,6 @@ h4 {
   margin-bottom: 0px;
 }
 
-nav {
-  position: relative;
-  top: 65px;
-}
-
-nav p {
-  display: inline-block;
-  margin-right: 40px;
-  text-align: center;
-}
-
-nav p:hover {
-  cursor: pointer;
-}
 
 
 /* Song Widget */
@@ -273,142 +295,68 @@ nav p:hover {
 }
 
 
-/* Media Queries */
-@media screen and (max-width: 990px){
-  .grey-box {
-    width: 380px;
+
+
+
+@media screen and (max-width: 715px) {
+  nav {
+    flex-direction: column;
+    padding: 0;
+    position: absolute;
+    margin: 0;
+    top: 0;
   }
 
-  .playlist-box {
-    height: 500px;
-    width: 45vw;
-  }
-
-  .text-container {
-    left: 15px;
-    top: 140px;
-  }
-}
-
-@media screen and (max-width: 900px){
-  .arrow img {
-    height: 60px;
-    width: 60px;
-  }
-
-  .grey-box {
-    width: 500px;
-  }
-
-  .playlist-box {
-    display: block;
-    height: 690px;
-    width: 85vw;
-  }
-
-  .text-container {
-    top: 330px;
-  }
-
-  #views {
-    margin-top: -30px;
-  }
-
-  #views, #views-number {
-    margin-left: 83%;
+  nav p {
+    margin: 10px;
+    text-align: left;
   }
 }
 
-@media screen and (max-width: 860px) {
-  .text-container {
-    top: 310px;
-  }
-}
-
-@media screen and (max-width: 780px) {
-  .grey-box {
-    width: 350px;
-  }
-
-  .text-container {
-    top: 280px;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .text-container {
-    top: 260px;
-  }
-
-  #admin-arrow {
-    font-size: 12px;
-  }
-
-  #admin-arrow img {
-    height: 20px;
-    width: 20px;
-  }
-
+@media screen and (max-width: 655px) {
   h1 {
-    font-size: 25px;
-    margin: 20px;
+    display: none;
   }
 
+  .playlist-box {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 655px) {
   h3 {
     font-size: 35px;
-    position: absolute;
-    top: 20px;
   }
 
   h3 img {
-    height: 32px;
-    width: 32px;
+    height: 37px;
+    width: 37px;
   }
+}
 
-  nav {
-    display: flex;
+@media screen and (max-width: 400px) {
+  h3 {
     position: absolute;
+    top: 95px;
+    left: 20px;
   }
 
-  #shares, #playlists, #personal-videos {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .text-container {
-    top: 180px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .grey-box {
-    width: 280px;
+  nav p {
+    display: none;
+    visibility: hidden;
   }
 
-  .playlist-box {
-    height: 500px;
+  #nav-lines {
+    display: block;
+    position: absolute;
+    top: 10px;
+    visibility: visible;
   }
 
-  .text-container {
-    top: 120px;
-  }
-
-  #views, #views-number {
-    margin-left: 76%;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .grey-box {
-    width: 230px;
-  }
-
-  .playlist-box {
-    height: 450px;
-  }
-
-  .text-container {
-    top: 90px;
+  #nav-lines img {
+    display: block;
+    visibility: visible;
+    height:12%;
+    width: 12%;
   }
 }
